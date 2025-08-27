@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicious burgers at CtN FastFood - Zinger Burger and Simple Burger with fresh ingredients.">
+    <title>Burgers - CtN FastFood</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-utensils me-2"></i>CtN FastFood
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="order.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge bg-warning text-dark rounded-pill">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Burgers" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Our Burgers</h1>
+                    <p class="lead mb-4">Savor our handcrafted burgers made with premium ingredients, fresh vegetables, and perfectly seasoned meat patties. Each burger is prepared to order and served with our signature sauce.</p>
+                    
+                    <div class="nutrition-info mb-4">
+                        <h5 class="fw-bold">Nutritional Information</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <p><strong>Calories:</strong> 450-550</p>
+                                <p><strong>Protein:</strong> 25-30g</p>
+                            </div>
+                            <div class="col-6">
+                                <p><strong>Carbs:</strong> 35-45g</p>
+                                <p><strong>Fat:</strong> 20-25g</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sub-products -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Choose Your Burger</h2>
+            <div class="row g-4">
+                <!-- Zinger Burger -->
+                <div class="col-md-6">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Zinger Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Zinger Burger</h5>
+                            <p class="card-text">Spicy chicken breast with lettuce, tomato, and our special zinger sauce on a toasted sesame bun.</p>
+                            <p class="price h4 text-danger">Rs 250.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Zinger Burger', 'Burgers', 250.00, 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Burger -->
+                <div class="col-md-6">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1556909/pexels-photo-1556909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Simple Burger" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Simple Burger</h5>
+                            <p class="card-text">Classic Anda Shami Burger, lettuce, tomato, onion, and pickles on a fresh bun.</p>
+                            <p class="price h4 text-danger">Rs 150.00</p>
+                            <button class="btn btn-primary w-100" onclick="addToCart('Simple Burger', 'Burgers', 150.00, 'https://images.pexels.com/photos/1556909/pexels-photo-1556909.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">You Might Also Like</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shawarmas" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Shawarmas</h5>
+                            <p class="card-text">Delicious wraps with tender meat</p>
+                            <a href="shawarmas.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fries" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Fries</h5>
+                            <p class="card-text">Perfect side for your burger</p>
+                            <a href="fries.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ice Cream" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ice Cream</h5>
+                            <p class="card-text">Sweet finish to your meal</p>
+                            <a href="ice-cream.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">CtN FastFood</h5>
+                    <p>Serving delicious fast food since 2020. Fresh ingredients, fast delivery, unbeatable prices.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Taj Plaza , City Chishtian Center</p>
+                    <p><i class="fas fa-phone me-2"></i>03096989681</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@ctnfastfood.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Business Hours</h5>
+                    <p>Monday - Friday: 12:00 AM - 1:00 PM</p>
+                    <p>Saturday - Sunday: 12:00 AM - 1:00 AM</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 CtN FastFood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                    <h5>Item Added to Cart!</h5>
+                    <p class="mb-3">Your item has been successfully added to your order.</p>
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Continue Shopping</button>
+                    <a href="order.html" class="btn btn-primary">View Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

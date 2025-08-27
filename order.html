@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Place your order at CtN FastFood - Easy online ordering with WhatsApp confirmation.">
+    <title>Order - CtN FastFood</title>
+     <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Microsoft Windows Tiles -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-utensils me-2"></i>CtN FastFood
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="order.html">Order</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="order.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge bg-warning text-dark rounded-pill">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-white">Place Your Order</h1>
+                    <p class="lead text-white">Fill in your details and select your favorite items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-user me-2"></i>Customer Information</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="orderForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="customerName" class="form-label fw-bold">Full Name *</label>
+                                        <input type="text" class="form-control" id="customerName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="customerPhone" class="form-label fw-bold">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="customerPhone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerAddress" class="form-label fw-bold">Delivery Address *</label>
+                                    <textarea class="form-control" id="customerAddress" rows="3" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Quick Add Items -->
+                    <div class="card shadow mt-4">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="mb-0"><i class="fas fa-plus me-2"></i>Quick Add Items</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="quick-add-card text-center">
+                                        <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Zinger Burger" class="img-fluid rounded mb-2">
+                                        <h6>Zinger Burger</h6>
+                                        <p class="text-muted small">Rs 250.00</p>
+                                        <button class="btn btn-sm btn-primary" onclick="addToCart('Zinger Burger', 'Burgers', 250.00, 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400')">Add</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="quick-add-card text-center">
+                                        <img src="https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Zinger Shawarma" class="img-fluid rounded mb-2">
+                                        <h6>Zinger Shawarma</h6>
+                                        <p class="text-muted small">200.00</p>
+                                        <button class="btn btn-sm btn-primary" onclick="addToCart('Zinger Shawarma', 'Shawarmas', 200.00, 'https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg?auto=compress&cs=tinysrgb&w=400')">Add</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="quick-add-card text-center">
+                                        <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Full Portion Fries" class="img-fluid rounded mb-2">
+                                        <h6>Full Fries</h6>
+                                        <p class="text-muted small">200.00</p>
+                                        <button class="btn btn-sm btn-primary" onclick="addToCart('Full Portion Fries', 'Fries', 200.00, 'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400')">Add</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="quick-add-card text-center">
+                                        <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Vanilla Ice Cream" class="img-fluid rounded mb-2">
+                                        <h6>Kulfa Ice Cream</h6>
+                                        <p class="text-muted small"> Single 60.00</p>
+                                        <button class="btn btn-sm btn-primary" onclick="addToCart('Vanilla Ice Cream - 1 Scoop', 'Ice Cream', 60.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="products.html" class="btn btn-outline-primary">Browse All Products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card shadow sticky-top">
+                        <div class="card-header bg-warning text-dark">
+                            <h4 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Your Order</h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="cartItems">
+                                <div class="text-center text-muted py-4" id="emptyCart">
+                                    <i class="fas fa-shopping-cart mb-3" style="font-size: 3rem; opacity: 0.3;"></i>
+                                    <p>Your cart is empty</p>
+                                    <a href="products.html" class="btn btn-primary btn-sm">Start Shopping</a>
+                                </div>
+                            </div>
+                            
+                            <div id="orderSummary" style="display: none;">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <strong>Total: Rs<span id="totalAmount">0.00</span></strong>
+                                </div>
+                                <button type="button" class="btn btn-success w-100 mt-3" onclick="submitOrder()">
+                                    <i class="fab fa-whatsapp me-2"></i>Order via WhatsApp
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary w-100 mt-2" onclick="clearCart()">
+                                    <i class="fas fa-trash me-2"></i>Clear Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">CtN FastFood</h5>
+                    <p>Serving delicious fast food since 2024. Fresh ingredients, fast delivery, unbeatable prices.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Taj plazza suger mil road, City Chishtian</p>
+                    <p><i class="fas fa-phone me-2"></i>03096989681</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@ctnfastfood.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Business Hours</h5>
+                    <p>Monday -Thursday: 12:00 PM - 1:00 AM</p>
+                  <p>Friday: 3:00 PM - 1:00 AM</p>
+                    <p>Saturday - Sunday: 11:00 AM - 12:00 AM</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 CtN FastFood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                    <h5>Item Added to Cart!</h5>
+                    <p class="mb-3">Your item has been successfully added to your order.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="cart.js"></script>
+    <script>
+        // Order submission
+        function submitOrder() {
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('customerPhone').value;
+            const address = document.getElementById('customerAddress').value;
+            
+            if (!name || !phone || !address) {
+                alert('Please fill in all required fields (Name, Phone, Address)');
+                return;
+            }
+            
+            const cart = getCart();
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add items before ordering.');
+                return;
+            }
+            
+            // Generate invoice
+            let invoice = "🍔 *Order from CtN FastFood* 🍔\n\n";
+            invoice += "📋 *Customer Details:*\n";
+            invoice += `👤 Name: ${name}\n`;
+            invoice += `📱 Phone: ${phone}\n`;
+            invoice += `📍 Address: ${address}\n\n`;
+            
+            invoice += "🛒 *Order Summary:*\n";
+            invoice += "━━━━━━━━━━━━━━━━━━━━━\n";
+            
+            let total = 0;
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                invoice += `• ${item.name}\n`;
+                invoice += `  Qty: ${item.quantity} × Rs${item.price.toFixed(2)} = Rs${subtotal.toFixed(2)}\n\n`;
+            });
+            
+            invoice += "━━━━━━━━━━━━━━━━━━━━━\n";
+            invoice += `💰 *Total: Rs${total.toFixed(2)}*\n\n`;
+            invoice += "Thank you for ordering! We'll confirm your order soon. 🙏";
+            
+            // WhatsApp URL (replace with your actual number)
+            const phoneNumber = "+923096989681"; // Replace with your WhatsApp number
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(invoice)}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Show confirmation
+            setTimeout(() => {
+                alert('Order submitted! We will contact you shortly via WhatsApp to confirm your order.');
+                clearCart();
+                document.getElementById('orderForm').reset();
+            }, 1000);
+        }
+        
+        // Load cart on page load
+        document.addEventListener('DOMContentLoaded', function() {
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

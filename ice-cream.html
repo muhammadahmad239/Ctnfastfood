@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium ice cream at CtN FastFood - Multiple flavors and scoop options available.">
+    <title>Ice Cream - CtN FastFood</title>
+ <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Microsoft Windows Tiles -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-utensils me-2"></i>CtN FastFood
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="order.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge bg-warning text-dark rounded-pill">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Premium Ice Cream" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Premium Ice Cream</h1>
+                    <p class="lead mb-4">Indulge in our creamy, premium ice cream made with the finest ingredients. Choose from various flavors and scoop options to create your perfect dessert experience.</p>
+                    
+                    <div class="nutrition-info mb-4">
+                        <h5 class="fw-bold">Nutritional Information (per scoop)</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <p><strong>Calories:</strong> 120-150</p>
+                                <p><strong>Protein:</strong> 2-3g</p>
+                            </div>
+                            <div class="col-6">
+                                <p><strong>Carbs:</strong> 15-20g</p>
+                                <p><strong>Fat:</strong> 6-8g</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ice Cream Customizer -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Build Your Ice Cream</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <form id="iceCreamForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label fw-bold">Choose Flavor</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flavor" id="vanilla" value="Vanilla" checked>
+                                            <label class="form-check-label" for="vanilla">
+                                                <i class="fas fa-circle text-warning me-2"></i>Vanilla
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flavor" id="chocolate" value="Chocolate">
+                                            <label class="form-check-label" for="chocolate">
+                                                <i class="fas fa-circle text-dark me-2"></i>Chocolate
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flavor" id="strawberry" value="Strawberry">
+                                            <label class="form-check-label" for="strawberry">
+                                                <i class="fas fa-circle text-danger me-2"></i>Strawberry
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flavor" id="mint" value="Mint Chocolate Chip">
+                                            <label class="form-check-label" for="mint">
+                                                <i class="fas fa-circle text-success me-2"></i>Mint Chocolate Chip
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label fw-bold">Number of Scoops</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="scoops" id="one-scoop" value="1" data-price="60.00" checked>
+                                            <label class="form-check-label" for="one-scoop">
+                                                1 Scoop - 60.00
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="scoops" id="two-scoops" value="2" data-price="120.00">
+                                            <label class="form-check-label" for="two-scoops">
+                                                2 Scoops - 120.00
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="scoops" id="three-scoops" value="3" data-price="180.00">
+                                            <label class="form-check-label" for="three-scoops">
+                                                3 Scoops - 180.00
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <p class="h5 mb-3">Total: Rs<span id="iceCreamPrice">60.00</span></p>
+                                    <button type="button" class="btn btn-primary btn-lg px-5" onclick="addCustomIceCream()">
+                                        <i class="fas fa-cart-plus me-2"></i>Add to Order
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-made Options -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Popular Combinations</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vanilla Single" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vanilla Delight</h5>
+                            <p class="card-text">Single scoop of classic vanilla ice cream</p>
+                            <p class="price h5 text-danger">Rs 60.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Vanilla Ice Cream - 1 Scoop', 'Ice Cream', 60.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chocolate Double" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Chocolate Supreme</h5>
+                            <p class="card-text">Double scoop of rich chocolate ice cream</p>
+                            <p class="price h5 text-danger">Rs 120.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Chocolate Ice Cream - 2 Scoops', 'Ice Cream', 120.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Triple Treat" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Triple Treat</h5>
+                            <p class="card-text">Three scoops of strawberry ice cream</p>
+                            <p class="price h5 text-danger">Rs 180.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Strawberry Ice Cream - 3 Scoops', 'Ice Cream', 180.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Complete Your Meal</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Burgers" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Burgers</h5>
+                            <p class="card-text">Start with a delicious burger</p>
+                            <a href="burgers.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shawarmas" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Shawarmas</h5>
+                            <p class="card-text">Try our flavorful wraps</p>
+                            <a href="shawarmas.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card h-100">
+                        <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fries" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Fries</h5>
+                            <p class="card-text">Add some crispy fries</p>
+                            <a href="fries.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">CtN FastFood</h5>
+                    <p>Serving delicious fast food since 2020. Fresh ingredients, fast delivery, unbeatable prices.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>123 Food Street, City Center</p>
+                    <p><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@ctnfastfood.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Business Hours</h5>
+                    <p>Monday - Friday: 10:00 AM - 11:00 PM</p>
+                    <p>Saturday - Sunday: 11:00 AM - 12:00 AM</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 CtN FastFood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                    <h5>Item Added to Cart!</h5>
+                    <p class="mb-3">Your item has been successfully added to your order.</p>
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Continue Shopping</button>
+                    <a href="order.html" class="btn btn-primary">View Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="cart.js"></script>
+    <script>
+        // Ice cream price calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            const scoopRadios = document.querySelectorAll('input[name="scoops"]');
+            const priceElement = document.getElementById('iceCreamPrice');
+            
+            scoopRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    priceElement.textContent = this.dataset.price;
+                });
+            });
+        });
+
+        function addCustomIceCream() {
+            const flavor = document.querySelector('input[name="flavor"]:checked').value;
+            const scoops = document.querySelector('input[name="scoops"]:checked');
+            const price = parseFloat(scoops.dataset.price);
+            const scoopCount = scoops.value;
+            
+            const itemName = `${flavor} Ice Cream - ${scoopCount} Scoop${scoopCount > 1 ? 's' : ''}`;
+            addToCart(itemName, 'Ice Cream', price, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
