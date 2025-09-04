@@ -93,9 +93,9 @@
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label fw-bold">Choose Flavor</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flavor" id="vanilla" value="Vanilla" checked>
-                                            <label class="form-check-label" for="vanilla">
-                                                <i class="fas fa-circle text-warning me-2"></i>Vanilla
+                                            <input class="form-check-input" type="radio" name="flavor" id="kulfa" value="Kulfa" checked>
+                                            <label class="form-check-label" for="kulfa">
+                                                <i class="fas fa-circle text-warning me-2"></i>Kulfa
                                             </label>
                                         </div>
                                         <div class="form-check">
@@ -111,36 +111,48 @@
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flavor" id="mint" value="Mint Chocolate Chip">
-                                            <label class="form-check-label" for="mint">
-                                                <i class="fas fa-circle text-success me-2"></i>Mint Chocolate Chip
+                                            <input class="form-check-input" type="radio" name="flavor" id="mango" value="Mango">
+                                            <label class="form-check-label" for="mango">
+                                                <i class="fas fa-circle text-warning me-2"></i>Mango
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flavor" id="pista" value="Pista">
+                                            <label class="form-check-label" for="pista">
+                                                <i class="fas fa-circle text-success me-2"></i>Pista
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label fw-bold">Number of Scoops</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="scoops" id="one-scoop" value="1" data-price="60.00" checked>
+                                            <input class="form-check-input" type="radio" name="scoops" id="one-scoop" value="1" data-price="50.00" checked>
                                             <label class="form-check-label" for="one-scoop">
-                                                1 Scoop - 60.00
+                                                1 Scoop - Rs 50.00
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="scoops" id="two-scoops" value="2" data-price="120.00">
+                                            <input class="form-check-input" type="radio" name="scoops" id="two-scoops" value="2" data-price="100.00">
                                             <label class="form-check-label" for="two-scoops">
-                                                2 Scoops - 120.00
+                                                2 Scoops - Rs 100.00
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="scoops" id="three-scoops" value="3" data-price="180.00">
+                                            <input class="form-check-input" type="radio" name="scoops" id="three-scoops" value="3" data-price="150.00">
                                             <label class="form-check-label" for="three-scoops">
-                                                3 Scoops - 180.00
+                                                3 Scoops - Rs 150.00
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="scoops" id="four-scoops" value="4" data-price="200.00">
+                                            <label class="form-check-label" for="four-scoops">
+                                                4 Scoops - Rs 200.00
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="text-center mt-4">
-                                    <p class="h5 mb-3">Total: Rs<span id="iceCreamPrice">60.00</span></p>
+                                    <p class="h5 mb-3">Total: Rs<span id="iceCreamPrice">50.00</span></p>
                                     <button type="button" class="btn btn-primary btn-lg px-5" onclick="addCustomIceCream()">
                                         <i class="fas fa-cart-plus me-2"></i>Add to Order
                                     </button>
@@ -162,10 +174,10 @@
                     <div class="product-card h-100">
                         <img src="https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vanilla Single" class="card-img-top">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Vanilla Delight</h5>
-                            <p class="card-text">Single scoop of classic vanilla ice cream</p>
-                            <p class="price h5 text-danger">Rs 60.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Vanilla Ice Cream - 1 Scoop', 'Ice Cream', 60.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                            <h5 class="card-title">Kulfa Delight</h5>
+                            <p class="card-text">Single scoop of classic kulfa ice cream</p>
+                            <p class="price h5 text-danger">Rs 50.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Kulfa Ice Cream - 1 Scoop', 'Ice Cream', 50.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
                                 <i class="fas fa-cart-plus me-2"></i>Add to Order
                             </button>
                         </div>
@@ -177,8 +189,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Chocolate Supreme</h5>
                             <p class="card-text">Double scoop of rich chocolate ice cream</p>
-                            <p class="price h5 text-danger">Rs 120.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Chocolate Ice Cream - 2 Scoops', 'Ice Cream', 120.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                            <p class="price h5 text-danger">Rs 100.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Chocolate Ice Cream - 2 Scoops', 'Ice Cream', 100.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
                                 <i class="fas fa-cart-plus me-2"></i>Add to Order
                             </button>
                         </div>
@@ -190,8 +202,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Triple Treat</h5>
                             <p class="card-text">Three scoops of strawberry ice cream</p>
-                            <p class="price h5 text-danger">Rs 180.00</p>
-                            <button class="btn btn-primary" onclick="addToCart('Strawberry Ice Cream - 3 Scoops', 'Ice Cream', 180.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
+                            <p class="price h5 text-danger">Rs 150.00</p>
+                            <button class="btn btn-primary" onclick="addToCart('Strawberry Ice Cream - 3 Scoops', 'Ice Cream', 150.00, 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg?auto=compress&cs=tinysrgb&w=400')">
                                 <i class="fas fa-cart-plus me-2"></i>Add to Order
                             </button>
                         </div>
